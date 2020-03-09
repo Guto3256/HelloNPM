@@ -5,6 +5,8 @@ let nome;
 
 http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+    
+    //gera nomes aleatórios a cada refresh
     nome = Form.names.fullName.generate();
     res.end('Oi ' + nome);
 }).listen(3000);
